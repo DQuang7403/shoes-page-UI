@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footwear Emporium - Shoes</title>
+  <link rel="stylesheet" href="shoes.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Sigmar+One&family=Sofia+Sans:wght@100&display=swap" rel="stylesheet">
+  <script src="shoes.js"></script>
+</head>
+<body>
+  <header>
+    <div class="shopName">
+      <img class="logo" src="images/logo2.png" alt="" srcset="">
+      <span>Footwear Emporium</span>
+    </div>
+    <nav class="mainNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shoes.html">Shoes</a></li>
+      <li><a href="about.html">About</a></li>
+      <div class="Cart">
+        <img class="cartImg" src="images/8O-FJN4w.png" alt="">
+        <div class="quantity">1</div>
+      </div>
+    </nav>
+  </header>
+  <section class="mainSection">
+    <div class="shoes">
+      <div class="shoe" data-index="0" data-status="active">
+        <div class="info_container">
+          <h1 class="mainHeader">Air Boost</h1>
+          <p class="info">Design for maximum speed</p>
+          <p class="feeling_info">With a soft and lightweight finish to give you the extra boost of speed</p>
+          <p class="price">Price: $199.00</p>
+          <a class="ShopNowBtn btn1" href="contact.html">Buy now</a>
+        </div>
+        <div class="box">
+          <img class="shoeImg" src="images/shoeimg.png" alt="">
+          <div class="colors">
+            <div class="orangeOne color"></div>
+            <div class="purpleOne color"></div>
+            <div class="blueOne color"></div>
+          </div>
+        </div>
+        <a class="ShopNowBtn btn2" href="contact.html">Buy now</a>
+      </div>
+      
+      <div class="shoe" data-index="1" data-status="unknown">
+        <div class="info_container">
+          <h1 class="mainHeader">NIKE FREE</h1>
+          <p class="info">Designed for natural movement and flexibility.</p>
+          <p class="feeling_info">Different styles cater to specific types of training and running, offering comfort, performance and versatility.</p>
+          <p class="price">Price: $99.97</p>
+          <a class="ShopNowBtn btn1" href="contact.html">Buy now</a>
+        </div>
+        <div class="box">
+          <img class="shoeImg" src="images/revolt-164_6wVEHfI-unsplash.jpg" alt="">
+          <div class="colors">
+            <div class="orangeOne color"></div>
+            <div class="whiteOne color"></div>
+            <div class="blueOne color"></div>
+          </div>
+        </div>
+        <a class="ShopNowBtn btn2" href="contact.html">Buy now</a>
+      </div>
+
+      <div class="shoe" data-index="2" data-status="unknown">
+        <div class="info_container">
+          <h1 class="mainHeader">New Balance X 90</h1>
+          <p class="info">Step up your style with our new shoe product!</p>
+          <p class="feeling_info">Sleek design, premium materials, and unmatched comfort make these shoes the perfect choice for any occasion.</p>
+          <p class="price">Price: $120.00</p>
+          <a class="ShopNowBtn btn1" href="contact.html">Buy now</a>
+        </div>
+        <div class="box">
+          <img class="shoeImg" src="images/maksim-larin-ezdrvzA1hZw-unsplash.jpg" alt="">
+          <div class="colors">
+            <div class="pinkOne color"></div>
+            <div class="greenOne color"></div>
+            <div class="brownOne color"></div>
+          </div>
+        </div>
+        <a class="ShopNowBtn btn2" href="contact.html">Buy now</a>
+      </div>
+    </div>
+    <div class="controler">
+      <button class="left-arrow" ><</button>
+        <div class="circle" data-order="0" data-active="on"></div>
+        <div class="circle" data-order="1" data-active="off"></div>
+        <div class="circle" data-order="2" data-active="off"></div>
+      <button class="right-arrow">></button>
+    </div>
+  </section>
+  
+</body>
+</html>

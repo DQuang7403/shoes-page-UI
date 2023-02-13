@@ -1,0 +1,124 @@
+*, *::befor, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #D9D9D9;
+}
+.nav{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+  
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  
+}
+li{
+  padding: 0 0.5em;
+  font-family: 'Russo One', sans-serif;
+  margin-right: 50px;
+  list-style: none;
+  font-size: 1.5rem;
+  width: 90px;
+  height: 40px;
+  border-radius: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+li:hover{
+  background-color: #343434;
+  color: rgb(240, 240, 240);
+}
+.mainSection{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+h1{
+  color: #9B5152;
+  font-size: 4rem;
+  font-family: 'Russo One', sans-serif;
+}
+label{
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+input, textarea{
+  resize: none;
+  color: white;
+  border: 5px solid #9B5152;
+  background-color: inherit;
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+#email, #name{
+  width: 240px;
+  height: 24px;
+}
+#feedBack{
+  width: 240px;
+  height: 96px;
+}
+
+.btn{
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.05rem;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 50px;
+  background-color: #9B5152;
+  margin-right: 50px;
+  border-radius: 3px;
+  transition: transform 200ms;
+  margin: 30px auto;
+  cursor: pointer;
+}
+.btn:hover{
+  transform: scale(1.2, 1.2);
+}
+.big-circle{
+  position: absolute;
+  width: 150vmin;
+  height: 150vmin;
+  overflow: hidden;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+}
+.big-circle::before{
+  content: '';
+  transform: translate(30%,17%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background: #2A2A2A;
+}
+
+
+@media(width <= 930px){
+  .mainSection{
+    flex-direction: column;
+  }
+  label{
+    color: #2A2A2A;
+  }
+  .big-circle{
+    display: none;
+  }
+  input, textarea{
+    color: #2A2A2A;
+  }
+}

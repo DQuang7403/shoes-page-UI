@@ -1,0 +1,250 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background-color: #2A2A2A;
+}
+a{
+  text-decoration: none;
+}
+.mainNav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+.shopName{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: .5em;
+}
+li, a{
+  color: #D9D9D9;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 90px;
+  height: 40px;
+  border-radius: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 .45em;
+}
+li:hover{
+  background-color: rgb(71, 71, 71);
+}
+.Cart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cartImg{
+  height: 40px;
+}
+.quantity{
+  color: white;
+  background-color: #989898;
+  padding: 8px 15px;
+  border-radius: 50%;
+  margin-left: 1em;
+}
+span{
+  color: #D9D9D9;
+}
+.logo{
+  width: 1.5em;
+  margin-right: .7em;
+}
+.shoe{
+  position: absolute;
+  display: flex;
+  padding: 0 5%;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 368px;
+  width: 100%;
+  transition: transform 400ms ease;
+}
+.shoes{
+  height: 500px;
+}
+.shoe[data-status="after"]{
+  transform: translateX(-50%) scale(0);
+}
+.shoe[data-status="become-active-from-left"]{
+  transform: translateX(50%) scale(0);
+  transition: none;
+}
+.shoe[data-status="before"]{
+  transform: translateX(50%) scale(0);
+}
+.shoe[data-status="become-active-from-right"]{
+  transform: translateX(-50%) scale(0);
+  transition: none;
+}
+.shoe[data-status="unknown"]{
+  transform: scale(0);
+}
+.mainSection{
+  position: relative;
+}
+.mainHeader{
+  padding-top: 1em;
+  font-size: 4rem;
+  color:#FFFFFF;
+  margin-bottom: 15px;
+  font-family: 'Russo One', sans-serif;
+  font-weight: bold;
+}
+p{
+  color: #D2D2D2;
+  font-size: 1.05rem;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+.btn1{
+  display: block;
+}
+.ShopNowBtn{
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 40px;
+  background-color: #9B5152;
+  margin-right: 50px;
+  border-radius: 3px;
+  transition: transform 200ms;
+  font-size: 1rem;
+}
+.btn2{
+  display: none;
+}
+.ShopNowBtn:hover{
+  transform: scale(1.2, 1.2);
+}
+.shoeImg{
+  border-radius: 30px;
+  width: 320px;
+}
+.pinkOne{
+  background-color: #CA9A9E;
+}
+.greenOne{
+  background-color: #9ACAC7;
+}
+.brownOne{
+  background-color: #CAAB9A;
+}
+.whiteOne{
+  background-color: whitesmoke;
+}
+.box{
+  margin-top: 30px;
+  background-color: #5C5C5C;
+  padding: 30px;
+  border-radius: 30px;
+  width: auto;
+}
+.colors{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.1em 0;
+  padding: 0 1.5em;
+}
+.on{
+  display: block;
+}
+.color{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 150ms;
+}
+.color:hover{
+  transform: scale(1.1, 1.1);
+}
+.orangeOne{
+  background-color: #FF0000;
+}
+.purpleOne{
+  background-color: #9429FF;
+}
+.blueOne{
+  background-color: #2550E8;
+}
+.controler{
+  margin: 800px 5vmin 0 5vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3vmin 30%;
+  position: relative;
+}
+
+.circle{
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+.circle[data-active = "on"]{
+  background-color: #5C5C5C;
+}
+.left-arrow, .right-arrow{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #D9D9D9;
+  font-size: 3.5rem;
+}
+.left-arrow:hover, .right-arrow:hover{
+  color: #5C5C5C;
+}
+@media (width <= 930px){
+  .shoe{
+    flex-direction: column;
+    top: 160px;
+  }
+  .shoes{
+    height: 920px;
+  }
+  .mainNav{
+    display: flex;
+    justify-content: space-around;
+    margin: 3% auto;
+    padding: 0;
+  }
+  .box{
+    margin-bottom: 30px;
+  }
+  .btn1{
+    display: none;
+  }
+  .btn2{
+    display: flex;
+    margin: 2em auto;
+    padding: 1em 0;
+  }
+}
