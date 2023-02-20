@@ -25,6 +25,22 @@ header{
   padding-right: 2em;
   padding-left: 2em;
 }
+.toggle-btn{
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 30px;
+}
+.toggle-btn .bar{
+  background-color: white;
+  height: 5px;
+  width: 100%;
+  border-radius: 10px;
+}
 .shopName{
   display: flex;
   align-items: center;
@@ -74,14 +90,14 @@ li:hover{
 }
 .mainHeader{
   padding-top: 1.5em;
-  font-size: 5rem;
+  font-size: clamp(1rem, 20vw, 4rem);
   color:#633033;
   margin-bottom: 15px;
   font-family: 'Russo One', sans-serif;
   font-weight: bold;
 }
 .smallHeader{
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   color: #633033;
   margin-bottom: 30px;
   font-weight: bold;
@@ -125,22 +141,62 @@ li:hover{
   transform: scale(1.2, 1.2);
 }
 .rightImg{
-  width: 60vmin;
+  max-height: 27em;
   mix-blend-mode: darken;
 }
 
-@media (width <= 930px ) {
+@media (width <= 800px ) {
   .rightImg{
     display: none;
+  }
+  .shopName{
+    padding-left: 2em;
+    margin-top: 1.5rem;
+  }
+  header{
+    display: block;
+    padding: 0;
+    margin: 0;
   }
   .mainNav{
     justify-content: space-around;
     margin: 3% auto;
     padding: 0;
+    margin: 0;
+    margin-top: 2.5em;
+  }
+  .mainSection{
+    justify-content: center;
+  }
+  .Cart{
+    display: none;
+  }
+  .mainNav > li{
+    width: 100%;
   }
   .mainHeader{
+    padding-top: 1em;
+    margin-left: 1.5rem;
+  }
+  .smallHeader{
+    margin-left: 1.5rem;
+    padding-top: .5em;
+  }
+  .leftSection{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+  .toggle-btn{
+      display: flex;
+  }
+  .mainNav{
+    display: none;
+  }
+  .mainNav.active{
+    display: flex;
+    flex-direction: column;
   }
   .buttons{
     justify-content: center;
